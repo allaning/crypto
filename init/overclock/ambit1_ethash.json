@@ -1,0 +1,16 @@
+{ "name": "ambit1",
+  "config": [
+    { "gpu_num": "0",
+      "gpu_name": "ASUS GTX 1060 6GB",
+      "mem_clock_offset": "500",
+      "gpu_clock_offset": "20",
+      "power_limit": "90"
+    },
+    { "gpu_num": "1",
+      "gpu_name": "ASUS GTX 1070ti ROG Strix",
+      "mem_clock_offset": "600",
+      "gpu_clock_offset": "0",
+      "power_limit": "120"
+    }
+  ]
+}
