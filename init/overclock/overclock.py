@@ -4,6 +4,12 @@
 # Platform: Ubuntu Linux 16.04 LTS
 #
 # Usage: sudo python overclock.py [json_config_file]
+#
+# You can also use a helper script, e.g. overclock.sh,
+# to invoke this python script with a default JSON config file.
+# A symbolic link can be added to your home directory to make
+# invocation easier.  E.g. use a link command such as:
+# ln -s ~/git/allaning/crypto/init/overclock.sh ~/overclock.sh
 
 import json
 import os
