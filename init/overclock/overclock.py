@@ -15,8 +15,10 @@ EXECUTE_SYSTEM_COMMANDS = True
 
 
 # Print in color
-# not working.. i think i need to configure my terminal or account to support colors
-def prLightGray(message): print("\033[97m{}\033[00m" .format(message))
+def prLightGray(message):
+    print("\033[1;30m" + message + "\033[1;37m")
+def prCyan(message):
+    print("\033[1;36m" + message + "\033[1;37m")
 
 
 def is_gpu_num_valid(num):
@@ -88,12 +90,12 @@ print("")
 prLightGray("Name: " + d["name"])
 
 for config in d["config"]:
-    prLightGray("------------------------------------------------------------------------")
-    prLightGray("GPU#: " + config["gpu_num"])
-    prLightGray("  GPU Name: " + config["gpu_name"])
-    prLightGray("  Memory Clock Offset: " + config["mem_clock_offset"])
-    prLightGray("  GPU Clock Offset: " + config["graphics_clock_offset"])
-    prLightGray("  Power Limit: " + config["power_limit"])
+    print("------------------------------------------------------------------------")
+    prCyan("GPU#: " + config["gpu_num"])
+    prCyan("  GPU Name: " + config["gpu_name"])
+    prCyan("  Memory Clock Offset: " + config["mem_clock_offset"])
+    prCyan("  GPU Clock Offset: " + config["graphics_clock_offset"])
+    prCyan("  Power Limit: " + config["power_limit"])
     print("")
 
     # store the values
@@ -133,6 +135,6 @@ for config in d["config"]:
     if EXECUTE_SYSTEM_COMMANDS:
         os.system("sudo DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 nvidia-settings -t -a \"[gpu:" + str(gpu_num) + "]/GPUGraphicsClockOffset[3]=" + str(graphics_clock_offset) + "\"")
 
-prLightGray("------------------------------------------------------------------------")
+print("------------------------------------------------------------------------")
 print("Done.")
 
