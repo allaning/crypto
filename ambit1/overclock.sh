@@ -27,7 +27,7 @@ CLO1=0
 PL1=120
 
 # Set the power limit (note this value is in watts, not percent)
-nvidia-smi -i ${GPU1} -pl ${PL1}
+sudo nvidia-smi -i ${GPU1} -pl ${PL1}
 # Apply overclocking settings
 # These are not working for 1070ti
 sudo DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 nvidia-settings -t -a "[gpu:${GPU1}]/GPUMemoryTransferRateOffset[3]=${MEM1}"
