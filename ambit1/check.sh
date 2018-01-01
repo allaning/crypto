@@ -7,7 +7,7 @@
 # To run this script via cron, enter the following to edit your cron jobs (does not need to be run as root):
 # crontab -e
 # Add the following line to have the script executed once every minute:
-# * * * * * /home/allan/git/allaning/crypto/ambit1/check.sh
+# * * * * * /home/allan/git/allaning/crypto/ambit1/check.sh >/dev/null 2>&1
 # After you exit from the editor, the modified crontab is checked for errors and, if there are no errors, it is installed automatically.
 # The file is stored in /var/spool/cron/crontabs but should only be edited using the crontab command.
 

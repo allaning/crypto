@@ -8,9 +8,9 @@
     },
     { "gpu_num": "1",
       "gpu_name": "ASUS GTX 1070ti ROG Strix",
-      "mem_clock_offset": "600",
+      "mem_clock_offset": "900",
       "graphics_clock_offset": "0",
-      "power_limit": "120"
+      "power_limit": "150"
     }
   ]
 }
