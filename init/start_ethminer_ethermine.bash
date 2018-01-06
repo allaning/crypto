@@ -1,5 +1,5 @@
 # Launches ethminer directly
-# Or run ethminer_launcher.sh to run in a screen session
+# Or run ethminer_ethermine_launcher.sh to run in a screen session
 
 export GPU_FORCE_64BIT_PTR=0
 export GPU_MAX_HEAP_SIZE=100
@@ -13,4 +13,5 @@ export GPU_SINGLE_ALLOC_PERCENT=100
 # -RH         Report hash rate to pool
 # -HWMON      Report temp and fan speed
 # -v N        Set verbosity (0-9; default is 8)
-./bin/ethminer --farm-recheck 200 -U -S eth-us-west1.nanopool.org:9999 -FS eth-us-east1.nanopool.org:9999 -O YOUR_ETH_ADDRESS.WORKER_NAME/YOUR_EMAIL -RH -HWMON -v 5
+cd /home/allan/
+./bin/ethminer --farm-recheck 200 -U -S us2.ethermine.org:4444 -FS us1.ethermine.org:4444 -O 0xc1d3930276C4ebbd1A343D53C52774A026d4cF27.ambit1 -RH -HWMON -v 2

@@ -10,5 +10,5 @@ else
 fi
 sleep $DELAY
 cd /home/allan/
-#su allan -c "screen -dmS ethm ./start_ethminer.bash"
-screen -dmS ethm ./start_ethminer.bash &
+su allan -c "screen -dmS ethm ./start_ethminer_ethermine.bash"
+#screen -dmS ethm ./start_ethminer_ethermine.bash

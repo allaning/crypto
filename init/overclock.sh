@@ -9,8 +9,8 @@
 [ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
 
 # Switch to git repo
-cd /home/allan/git/allaning/crypto/init/overclock
+cd /home/allan/git/allaning/crypto/init/
 
-# Call with ambit1_ethash.json
-python overclock.py ambit1_ethash.json
+# Call with current config file
+python overclock.py ../ambit1/overclock_ethash.json
 
