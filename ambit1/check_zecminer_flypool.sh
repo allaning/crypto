@@ -33,15 +33,12 @@ done
 
 
 # Check if the miner needs to be restarted (or started)
-# The following must be updated if any of the following change:
-#      1. Not using zecminer
-#      2. Not using screen
+# The following must be updated if not using zecminer
 
 if (($RESTART_MINER == 1)); then
   echo Restarting miner! Log: $LOG
   # Kill the processes
   pkill -f "bin/miner"
-  pkill -f "screen"
   # Pause
   sleep 10  # seconds
   # Restart miner
