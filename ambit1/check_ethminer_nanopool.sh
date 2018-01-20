@@ -15,7 +15,7 @@ RESTART_MINER=0
 LOG=/home/allan/`date +%Y%m%d_%H%M%S`_check_ethminer_nanopool.log
 
 # TODO Set the upper bound below to (Number of GPUs - 1)
-for GPU in {0..1}
+for GPU in {0..2}
 do
   UTIL=`nvidia-smi -i $GPU --query-gpu=utilization.gpu --format=csv,noheader | cut -f1 -d" "`
   if (($UTIL < 75)); then

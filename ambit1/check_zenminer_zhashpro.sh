@@ -12,10 +12,10 @@
 # Flag indicating whether or not we need to restart the miner
 RESTART_MINER=0
 
-LOG=/home/allan/`date +%Y%m%d_%H%M%S`_check_zecminer_flypool.log
+LOG=/home/allan/`date +%Y%m%d_%H%M%S`_check_zenminer_zhashpro.log
 
 # TODO Set the upper bound below to (Number of GPUs - 1)
-for GPU in {0..1}
+for GPU in {0..2}
 do
   UTIL=`nvidia-smi -i $GPU --query-gpu=utilization.gpu --format=csv,noheader | cut -f1 -d" "`
   if (($UTIL < 75)); then
@@ -33,16 +33,16 @@ done
 
 
 # Check if the miner needs to be restarted (or started)
-# The following must be updated if not using zecminer
+# The following must be updated if not using zenminer
 
 if (($RESTART_MINER == 1)); then
   echo Restarting miner! Log: $LOG
   # Kill the processes
-  pkill -f "bin/miner"
+  pkill -f "ZecMiner0.3.4b/miner"
   # Pause
   sleep 10  # seconds
   # Restart miner
   cd /home/allan/
-  screen -dmS ethm ./start_zecminer_flypool.bash
+  screen -dmS zenm ./start_zenminer_zhashpro.bash
 fi
 

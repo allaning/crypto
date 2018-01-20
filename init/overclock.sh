@@ -12,5 +12,8 @@
 cd /home/allan/git/allaning/crypto/init/
 
 # Call with current config file
-python overclock.py ../ambit1/overclock_ethash.json
+# Uncomment after verifying that the GPUs are numbered consistently between bootups
+#python overclock.py ../ambit1/overclock_ethash.json
+#python overclock.py ../ambit1/overclock_equihash.json
+python overclock.py ../ambit1/overclock_equihash_lo.json
 

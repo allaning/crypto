@@ -1,0 +1,22 @@
+{ "name": "ambit1 equihash lower power",
+  "config": [
+    { "gpu_num": "0",
+      "gpu_name": "ASUS GTX 1070 Ti ROG Strix",
+      "mem_clock_offset": "360",
+      "graphics_clock_offset": "40",
+      "power_limit": "130"
+    },
+    { "gpu_num": "1",
+      "gpu_name": "ASUS GTX 1060 6GB",
+      "mem_clock_offset": "-20",
+      "graphics_clock_offset": "-10",
+      "power_limit": "85"
+    },
+    { "gpu_num": "2",
+      "gpu_name": "EVGA GTX 1080 Gaming",
+      "mem_clock_offset": "420",
+      "graphics_clock_offset": "60",
+      "power_limit": "140"
+    }
+  ]
+}

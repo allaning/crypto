@@ -1,13 +1,19 @@
-{ "name": "ambit1",
+{ "name": "ambit1 reset",
   "config": [
     { "gpu_num": "0",
+      "gpu_name": "ASUS GTX 1070 Ti ROG Strix",
+      "mem_clock_offset": "0",
+      "graphics_clock_offset": "0",
+      "power_limit": "180"
+    },
+    { "gpu_num": "1",
       "gpu_name": "ASUS GTX 1060 6GB",
       "mem_clock_offset": "0",
       "graphics_clock_offset": "0",
       "power_limit": "120"
     },
-    { "gpu_num": "1",
-      "gpu_name": "ASUS GTX 1070ti ROG Strix",
+    { "gpu_num": "2",
+      "gpu_name": "EVGA GTX 1080 Gaming",
       "mem_clock_offset": "0",
       "graphics_clock_offset": "0",
       "power_limit": "180"
